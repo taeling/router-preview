@@ -1,5 +1,6 @@
-import { createRoutes, createRouter } from '@kitbag/router';
+import { createRoutes, createRouter, query } from '@kitbag/router';
 import HomeView from '../views/HomeView.vue';
+import { sortParam } from './params';
 
 const routes = createRoutes([
   {
@@ -10,7 +11,21 @@ const routes = createRoutes([
   {
     name: 'settings',
     path: '/settings',
+    query: 'search=:?search',
     component: () => import('../views/SettingsView.vue'),
+    children: createRoutes([
+      {
+        name: 'profile',
+        path: '/profile',
+        component: () => import('../views/SettingsProfileView.vue'),
+      },
+      {
+        name: 'keys',
+        path: '/keys',
+        query: query('sort=:?sort', {sort: sortParam}),
+        component: () => import('../views/SettingsKeysView.vue'),
+      },
+    ])
   },
 ]);
 

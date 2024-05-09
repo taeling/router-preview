@@ -1,8 +1,12 @@
 <script lang="ts" setup>
-import AppNavigation from './components/AppNavigation.vue';
+import NavigationBar from './components/NavigationBar.vue';
 </script>
 
 <template>
-  <AppNavigation />
+  <NavigationBar>
+    <router-link :to="(resolve) => resolve('home')">Home</router-link>
+    <router-link :to="(resolve) => resolve('settings')">Settings</router-link>
+  </NavigationBar>
+  
   <router-view />
 </template>
