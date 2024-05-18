@@ -11,7 +11,7 @@ const routes = createRoutes([
   {
     name: 'settings',
     path: '/settings',
-    query: 'search=:?search',
+    query: 'search=[?search]',
     component: () => import('../views/SettingsView.vue'),
     children: createRoutes([
       {
@@ -22,7 +22,7 @@ const routes = createRoutes([
       {
         name: 'keys',
         path: '/keys',
-        query: query('sort=:?sort', {sort: sortParam}),
+        query: query('sort=[?sort]', { sort: sortParam }),
         component: () => import('../views/SettingsKeysView.vue'),
       },
     ])
