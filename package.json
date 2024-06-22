@@ -9,13 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@kitbag/router": "0.2.0",
+    "@kitbag/router": "0.4.2",
     "vue": "^3.4.26"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
     "typescript": "^5.2.2",
     "vite": "^5.2.10",
+    "vite-plugin-vue-devtools": "^7.3.0",
     "vue-tsc": "^2.0.16"
   }
 }
