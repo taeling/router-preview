@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import './style.css';
-import { router } from './router';
 import App from './App.vue';
+import { router } from './router';
 
 const app = createApp(App);
 
@@ -11,6 +11,6 @@ declare module '@kitbag/router' {
   }
 }
 
-app.use(router);
+app.use(router)
 
 app.mount('#app');
