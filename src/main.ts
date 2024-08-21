@@ -8,6 +8,7 @@ const app = createApp(App);
 declare module '@kitbag/router' {
   interface Register {
     router: typeof router
+    rejections: ['AuthNeeded']
   }
 }
 
