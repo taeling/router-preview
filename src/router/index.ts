@@ -31,6 +31,4 @@ const keys = createRoute({
   component: defineAsyncComponent(() => import('../views/SettingsKeysView.vue'))
 })
 
-export const router = createRouter([home, settings, profile, keys], {
-  base: '/p'
-})
+export const router = createRouter([home, settings, profile, keys])
