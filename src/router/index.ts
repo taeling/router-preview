@@ -24,14 +24,14 @@ const settings = createRoute({
 
 const profile = createRoute({
   parent: settings,
-  name: 'profile',
+  name: 'settings.profile',
   path: '/profile',
   component: defineAsyncComponent(() => import('../views/SettingsProfileView.vue')),
 })
 
 const keys = createRoute({
   parent: settings,
-  name: 'keys',
+  name: 'settings.keys',
   path: '/keys',
   query: query('sort=[?sort]', { sort: sortParam }),
   component: defineAsyncComponent(() => import('../views/SettingsKeysView.vue'))
