@@ -1,6 +1,6 @@
 <template>
-    <router-link v-bind="props" style="color:red">
-        <slot></slot>
+    <router-link v-bind="props" style="color:red" v-slot="{isMatch}">
+        <slot :class="{'active':isMatch}"></slot>
     </router-link>
 </template>
 
